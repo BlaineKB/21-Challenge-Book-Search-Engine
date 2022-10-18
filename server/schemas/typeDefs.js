@@ -13,6 +13,7 @@ const typeDefs = gql`
     saveBook(book: saveBookInput): User
     deleteBook(bookId: String!): User
   }
+
   type User {
     _id: ID
     username: String
@@ -20,6 +21,7 @@ const typeDefs = gql`
     bookCount: Int
     savedBooks: [Book]
   } 
+
   type Book {
     bookId: ID
     title: String
@@ -29,6 +31,7 @@ const typeDefs = gql`
     image: String
     link: String
   }
+  
   type Auth {
     token: ID!
     user: User
